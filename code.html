@@ -3,387 +3,443 @@
 <html lang="th"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jan Fashion - Home</title>
+<title>Jan Fashion - สินค้า</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-background": "#1e1b1b",
-                    "on-error": "#ffffff",
-                    "secondary-container": "#e6e5b9",
-                    "surface-container-lowest": "#ffffff",
-                    "error": "#ba1a1a",
-                    "surface-container-low": "#faf2f2",
-                    "on-secondary-fixed": "#1d1d03",
-                    "surface-container-high": "#efe6e7",
-                    "primary": "#78555e",
-                    "secondary": "#60603e",
-                    "on-secondary-container": "#666643",
-                    "surface": "#fff8f8",
-                    "surface-container": "#f4ecec",
-                    "outline": "#817476",
-                    "secondary-fixed-dim": "#cac99f",
-                    "primary-fixed-dim": "#e7bbc6",
-                    "tertiary-fixed": "#e2e2e2",
-                    "surface-bright": "#fff8f8",
-                    "on-primary-fixed-variant": "#5e3e47",
-                    "on-secondary": "#ffffff",
-                    "on-primary-container": "#7a5761",
-                    "primary-fixed": "#ffd9e2",
-                    "on-tertiary": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "background": "#fff8f8",
-                    "tertiary": "#5d5f5f",
-                    "on-surface": "#1e1b1b",
-                    "on-secondary-fixed-variant": "#484828",
-                    "surface-variant": "#e9e0e1",
-                    "on-error-container": "#93000a",
-                    "on-tertiary-fixed-variant": "#454747",
-                    "secondary-fixed": "#e6e5b9",
-                    "inverse-surface": "#332f30",
-                    "inverse-on-surface": "#f7efef",
-                    "on-tertiary-fixed": "#1a1c1c",
-                    "on-primary-fixed": "#2d141c",
-                    "on-surface-variant": "#4f4446",
-                    "tertiary-fixed-dim": "#c6c6c7",
-                    "surface-container-highest": "#e9e0e1",
-                    "on-primary": "#ffffff",
-                    "inverse-primary": "#e7bbc6",
-                    "tertiary-container": "#dddddd",
-                    "outline-variant": "#d3c3c5",
-                    "surface-dim": "#e0d8d8",
-                    "surface-tint": "#78555e",
-                    "on-tertiary-container": "#606161",
-                    "primary-container": "#ffd1dc"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "sm": "12px",
-                    "base": "8px",
-                    "xl": "64px",
-                    "xs": "4px",
-                    "lg": "40px",
-                    "gutter": "20px",
-                    "md": "24px",
-                    "container-max": "1200px"
-            },
-            "fontFamily": {
-                    "headline-sm": [
-                            "Montserrat"
-                    ],
-                    "body-sm": [
-                            "Open Sans"
-                    ],
-                    "display-lg": [
-                            "Montserrat"
-                    ],
-                    "body-md": [
-                            "Open Sans"
-                    ],
-                    "headline-lg-mobile": [
-                            "Montserrat"
-                    ],
-                    "body-lg": [
-                            "Open Sans"
-                    ],
-                    "label-md": [
-                            "Montserrat"
-                    ],
-                    "headline-md": [
-                            "Montserrat"
-                    ],
-                    "headline-lg": [
-                            "Montserrat"
-                    ]
-            },
-            "fontSize": {
-                    "headline-sm": [
-                            "20px",
-                            {
-                                    "lineHeight": "1.4",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "body-sm": [
-                            "14px",
-                            {
-                                    "lineHeight": "1.5",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "display-lg": [
-                            "48px",
-                            {
-                                    "lineHeight": "1.2",
-                                    "letterSpacing": "-0.02em",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "body-md": [
-                            "16px",
-                            {
-                                    "lineHeight": "1.6",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "headline-lg-mobile": [
-                            "28px",
-                            {
-                                    "lineHeight": "1.3",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "body-lg": [
-                            "18px",
-                            {
-                                    "lineHeight": "1.6",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "label-md": [
-                            "14px",
-                            {
-                                    "lineHeight": "1.0",
-                                    "letterSpacing": "0.05em",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "headline-md": [
-                            "24px",
-                            {
-                                    "lineHeight": "1.4",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "headline-lg": [
-                            "32px",
-                            {
-                                    "lineHeight": "1.3",
-                                    "fontWeight": "600"
-                            }
-                    ]
-            }
-    },
-        },
-      }
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#1e1b1b",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#e6e5b9",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#faf2f2",
+                      "on-secondary-fixed": "#1d1d03",
+                      "surface-container-high": "#efe6e7",
+                      "primary": "#78555e",
+                      "secondary": "#60603e",
+                      "on-secondary-container": "#666643",
+                      "surface": "#fff8f8",
+                      "surface-container": "#f4ecec",
+                      "outline": "#817476",
+                      "secondary-fixed-dim": "#cac99f",
+                      "primary-fixed-dim": "#e7bbc6",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-bright": "#fff8f8",
+                      "on-primary-fixed-variant": "#5e3e47",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#7a5761",
+                      "primary-fixed": "#ffd9e2",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "background": "#fff8f8",
+                      "tertiary": "#5d5f5f",
+                      "on-surface": "#1e1b1b",
+                      "on-secondary-fixed-variant": "#484828",
+                      "surface-variant": "#e9e0e1",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "secondary-fixed": "#e6e5b9",
+                      "inverse-surface": "#332f30",
+                      "inverse-on-surface": "#f7efef",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-primary-fixed": "#2d141c",
+                      "on-surface-variant": "#4f4446",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-container-highest": "#e9e0e1",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#e7bbc6",
+                      "tertiary-container": "#dddddd",
+                      "outline-variant": "#d3c3c5",
+                      "surface-dim": "#e0d8d8",
+                      "surface-tint": "#78555e",
+                      "on-tertiary-container": "#606161",
+                      "primary-container": "#ffd1dc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "base": "8px",
+                      "xl": "64px",
+                      "xs": "4px",
+                      "lg": "40px",
+                      "gutter": "20px",
+                      "md": "24px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "Montserrat"
+                      ],
+                      "body-sm": [
+                              "Open Sans"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Open Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Open Sans"
+                      ],
+                      "label-md": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
     </script>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .material-symbols-outlined.fill {
+        .icon-fill {
             font-variation-settings: 'FILL' 1;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fff8f8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e9e0e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d3c3c5;
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen">
-<!-- TopAppBar -->
-<header class="sticky docked full-width top-0 z-50 bg-surface dark:bg-inverse-surface shadow-sm transition-all duration-300">
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased">
+<!-- Header / TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface text-primary dark:text-inverse-primary font-headline-sm text-headline-sm font-label-md text-label-md w-full sticky top-0 z-50 bg-surface-container-lowest dark:bg-surface-dim shadow-sm">
 <div class="flex justify-between items-center w-full px-base md:px-xl py-4 max-w-container-max mx-auto">
-<!-- Brand Logo -->
-<a class="flex items-center gap-2 hover:opacity-80 transition-opacity" href="#">
-<img alt="Jan Fashion Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBuQmhMKJI8Yr2UFNWHlRkg9ANAq4BxNDTZDp8LnJawo5s7bN2oJTcKIlIGdhXApC7Ka74xdppnL9ADPrpSpp4Hfvgp7rdfV2DO7pLk4Cp6Wo6N6drcbtPU6xz4D5dJPlnW7cqUTJXXpMoh9pIOmxLr-orq4a991YFZKwGaMRAvsPStWJU9-TX0EsxYUQyc06VVTvTZ8XvBjsSei6YXugTPxP_EdbHyg3heNb6GC07W1n1V20Ao180"/>
-<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary hidden md:block">Jan Fashion</span>
-</a>
-<!-- Navigation Links (Desktop) -->
-<nav class="hidden md:flex gap-lg">
-<a class="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 transition-colors hover:opacity-80" href="#">หน้าแรก</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80" href="#">สินค้าทั้งหมด</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80" href="#">เกี่ยวกับเรา</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80" href="#">ติดต่อเรา</a>
-</nav>
-<!-- Trailing Icons -->
+<!-- Brand -->
 <div class="flex items-center gap-4">
-<button aria-label="Search" class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container-high Active:scale-95 duration-150">
-<span class="material-symbols-outlined">search</span>
+<img alt="Jan Fashion Logo" class="h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBuQmhMKJI8Yr2UFNWHlRkg9ANAq4BxNDTZDp8LnJawo5s7bN2oJTcKIlIGdhXApC7Ka74xdppnL9ADPrpSpp4Hfvgp7rdfV2DO7pLk4Cp6Wo6N6drcbtPU6xz4D5dJPlnW7cqUTJXXpMoh9pIOmxLr-orq4a991YFZKwGaMRAvsPStWJU9-TX0EsxYUQyc06VVTvTZ8XvBjsSei6YXugTPxP_EdbHyg3heNb6GC07W1n1V20Ao180"/>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary hidden sm:block">Jan Fashion</span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-md items-center">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80 transition-opacity" href="#">Home</a>
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 hover:opacity-80 transition-opacity" href="#">Products</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80 transition-opacity" href="#">About Us</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80 transition-opacity" href="#">Contact</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-sm">
+<button aria-label="search" class="p-2 rounded-full hover:bg-surface-variant/50 transition-colors hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="search">search</span>
 </button>
-<button aria-label="Profile" class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container-high Active:scale-95 duration-150 hidden sm:block">
-<span class="material-symbols-outlined">person</span>
+<button aria-label="person" class="p-2 rounded-full hover:bg-surface-variant/50 transition-colors hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="person">person</span>
 </button>
-<button aria-label="Cart" class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container-high Active:scale-95 duration-150 relative">
-<span class="material-symbols-outlined">shopping_bag</span>
-<span class="absolute top-1 right-1 flex h-3 w-3">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-</span>
+<button aria-label="shopping_bag" class="p-2 rounded-full hover:bg-surface-variant/50 transition-colors hover:opacity-80 transition-opacity relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-primary text-on-primary text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">2</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button aria-label="menu" class="md:hidden p-2 rounded-full hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
 </button>
 </div>
 </div>
 </header>
-<main class="flex-grow flex flex-col">
-<!-- Hero Section -->
-<section class="relative w-full h-[600px] md:h-[700px] flex items-center bg-surface-container-low overflow-hidden">
-<div class="absolute inset-0 w-full h-full">
-<img class="w-full h-full object-cover object-center" data-alt="A high-quality, editorial style photograph of an elegant young woman wearing modern, soft pastel minimalist clothing. She is standing in a brightly lit, minimalist studio space with gentle, diffused natural light. The aesthetic is clean, soft minimalism, prioritizing soft pinks and cream tones. She exudes confidence and calm, appealing to a young professional demographic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAorCHRXJfJBetdufxt30PgGHEmgvXJmqeEG3mwEvri9O4Xe-LZw1Vqyd4Zygh2YHcdDYWGFtCv7pZNe9Cdjh9E2lxzLyfU34j1owaH1frvakX44mJVqlgcv7411oqyoEF1336LAgBp92BGXy799mgfAKheQY4Zt1Haz_8VCMLsOdhTVMHRsZ_k33gjIQw_CpVL3g_hmwUbIaIzWspLA9VZyyp2lIUHR0fGJdnUrK2IwR2-B-I6A6NY"/>
-<div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent md:w-2/3"></div>
-</div>
-<div class="relative z-10 w-full max-w-container-max mx-auto px-base md:px-xl flex flex-col items-start gap-6">
-<span class="inline-block py-1 px-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md tracking-wider">NEW COLLECTION</span>
-<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-background max-w-lg leading-tight">
-                    สัมผัสความนุ่มนวล<br/>ในสไตล์คุณ
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
-                    คอลเลกชันใหม่ล่าสุด ลดพิเศษ 20% สำหรับลูกค้าออนไลน์เท่านั้น ช้อปเลยวันนี้!
-                </p>
-<button class="mt-4 px-8 py-3 bg-primary text-on-primary rounded-md font-label-md text-label-md hover:bg-primary/90 transition-all duration-200 shadow-[0_4px_12px_rgba(232,180,188,0.25)] hover:shadow-[0_8px_24px_rgba(232,180,188,0.35)] hover:-translate-y-0.5 active:scale-95">
-                    ช้อปเลย
-                </button>
-</div>
-</section>
-<!-- Popular Items Section (Bento Grid Style) -->
-<section class="py-xl bg-background w-full max-w-container-max mx-auto px-base md:px-xl">
-<div class="flex justify-between items-end mb-lg">
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-base md:px-md lg:px-xl py-lg md:py-xl grid grid-cols-1 lg:grid-cols-12 gap-gutter md:gap-md">
+<!-- Sidebar Filters -->
+<aside class="hidden lg:block lg:col-span-3 space-y-lg pr-md">
 <div>
-<h2 class="font-headline-lg text-headline-lg text-on-background">สินค้ายอดนิยม</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">สไตล์ที่ได้รับความไว้วางใจจากลูกค้า</p>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-md border-b border-surface-variant pb-xs">หมวดหมู่</h2>
+<ul class="space-y-sm font-body-md text-on-surface-variant">
+<li>
+<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors">
+<input checked="" class="form-checkbox text-primary-container rounded border-outline-variant focus:ring-primary focus:ring-offset-surface w-5 h-5 bg-surface-container-lowest" type="checkbox"/>
+<span>ทั้งหมด (All)</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors">
+<input class="form-checkbox text-primary-container rounded border-outline-variant focus:ring-primary focus:ring-offset-surface w-5 h-5 bg-surface-container-lowest" type="checkbox"/>
+<span>เดรส (Dresses)</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors">
+<input class="form-checkbox text-primary-container rounded border-outline-variant focus:ring-primary focus:ring-offset-surface w-5 h-5 bg-surface-container-lowest" type="checkbox"/>
+<span>เสื้อ (Tops)</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors">
+<input class="form-checkbox text-primary-container rounded border-outline-variant focus:ring-primary focus:ring-offset-surface w-5 h-5 bg-surface-container-lowest" type="checkbox"/>
+<span>กระโปรง (Skirts)</span>
+</label>
+</li>
+</ul>
 </div>
-<a class="hidden sm:flex items-center gap-1 font-label-md text-label-md text-primary hover:underline group" href="#">
-                    ดูทั้งหมด
-                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
-<!-- Product Card 1 (Large Focus) -->
-<article class="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 group cursor-pointer relative rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] bg-surface-container-lowest transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)]">
-<div class="w-full h-full min-h-[400px] bg-surface-container relative">
-<img class="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105" data-alt="A flat lay photograph of a beautiful pastel pink oversized blazer paired with a cream silk camisole. The items are neatly arranged on a clean white surface with subtle ambient shadows. The lighting is soft and bright, highlighting the texture of the fabrics. Minimalist and elegant composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA2UGp85Pe0yeufhPrb0SuGcWBoJLXA4ZVnzIXQB8o9XyswAfySWHypeZcgwAQaVgkukpbqJzgXSyMy0nZ-22tDn_p4928OQEQ_TgAMhKQ9Sw-EI32gumAn4vFCbFSx9e84mg3zrfKjd9B1d7Opj_dp-lGWyHYfs_4ia2-DaGRLzsrp1SSOygaRJNWUWochLeJGNhHVB5TPzuAAeXUsxMGOBg8Gp5MMvyV0jwfIp5m9vpTBxol0Y7d"/>
-<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full font-label-md text-xs">Best Seller</div>
-</div>
-<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/95 via-background/80 to-transparent backdrop-blur-sm flex justify-between items-end">
 <div>
-<h3 class="font-headline-md text-headline-md text-on-background mb-1">เบลเซอร์สีพาสเทล ทรงโอเวอร์ไซส์</h3>
-<p class="font-label-md text-label-md text-primary">฿1,290</p>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-md border-b border-surface-variant pb-xs">ช่วงราคา</h2>
+<div class="space-y-sm">
+<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors font-body-md text-on-surface-variant">
+<input class="form-radio text-primary-container border-outline-variant focus:ring-primary bg-surface-container-lowest" name="price" type="radio"/>
+<span>ต่ำกว่า ฿500</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors font-body-md text-on-surface-variant">
+<input checked="" class="form-radio text-primary-container border-outline-variant focus:ring-primary bg-surface-container-lowest" name="price" type="radio"/>
+<span>฿500 - ฿1,000</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors font-body-md text-on-surface-variant">
+<input class="form-radio text-primary-container border-outline-variant focus:ring-primary bg-surface-container-lowest" name="price" type="radio"/>
+<span>มากกว่า ฿1,000</span>
+</label>
 </div>
-<button class="bg-surface-container-lowest text-on-surface p-3 rounded-full shadow-sm hover:bg-primary hover:text-on-primary transition-colors active:scale-95">
-<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-md border-b border-surface-variant pb-xs">ขนาด (ไซส์)</h2>
+<div class="flex flex-wrap gap-xs">
+<button class="px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-primary-container hover:border-primary-container hover:text-on-primary-container transition-colors bg-primary-container text-on-primary-container border-primary-container">S</button>
+<button class="px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-primary-container hover:border-primary-container hover:text-on-primary-container transition-colors">M</button>
+<button class="px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-primary-container hover:border-primary-container hover:text-on-primary-container transition-colors">L</button>
+<button class="px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-primary-container hover:border-primary-container hover:text-on-primary-container transition-colors">XL</button>
+</div>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-md border-b border-surface-variant pb-xs">สี</h2>
+<div class="flex gap-2">
+<button class="w-6 h-6 rounded-full bg-[#fca5a5] border border-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ring-offset-surface"></button>
+<button class="w-6 h-6 rounded-full bg-[#bfdbfe] border border-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ring-offset-surface"></button>
+<button class="w-6 h-6 rounded-full bg-[#fef08a] border border-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ring-offset-surface ring-2 ring-primary ring-offset-2"></button>
+<button class="w-6 h-6 rounded-full bg-[#e9d5ff] border border-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ring-offset-surface"></button>
+<button class="w-6 h-6 rounded-full bg-[#f3f4f6] border border-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ring-offset-surface"></button>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="col-span-1 lg:col-span-9">
+<!-- Mobile Filter Toggle (Visible only on small screens) -->
+<div class="lg:hidden flex justify-between items-center mb-md border-b border-surface-variant pb-sm">
+<h1 class="font-headline-md text-headline-md text-primary">สินค้าทั้งหมด</h1>
+<button class="flex items-center gap-xs px-3 py-2 bg-surface-container rounded-md text-on-surface-variant font-label-md hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+<span>ตัวกรอง</span>
 </button>
+</div>
+<!-- Header for desktop -->
+<div class="hidden lg:flex justify-between items-end mb-lg">
+<h1 class="font-display-lg text-display-lg text-primary">สินค้าคอลเลกชันใหม่</h1>
+<p class="font-body-md text-on-surface-variant">แสดง 1-6 จาก 24 รายการ</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-md">
+<!-- Product Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] flex flex-col group hover:-translate-y-1 transition-transform duration-300">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A soft minimalist flat lay or model shot of a delicate pastel pink summer dress. The fabric is light and flowing. The lighting is soft, bright, and natural, creating a clean, aesthetic look suitable for a high-end boutique e-commerce store. Background is a soft cream color." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG1qvyw3ge774YTy8Nn43Mr5GpfxFlLXgh3oqlM83-ymkBiCGvL_29kB-UdMaB_s79YSvnlC8Mbpdc13SLx31gEACGLbU8gpR2EO8QUT3tnDgqgDjER_-J7OYmoggT_WdNsxQ15W3xtRlfRkKVbX1r3x4X1jMsAoun_bV-aIHOkoi-YlRsmFnoueO_g2QdFE1_0GfD2pNRLAetWakFszBC9lYDMHWBC6U-hmwuRNELYto0feSNUMVL"/>
+<div class="absolute top-2 right-2 flex flex-col gap-2">
+<button class="p-2 bg-surface-container-lowest/80 backdrop-blur-sm rounded-full text-on-surface-variant hover:text-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">เดรสผ้าชีฟองสีชมพูอ่อน</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">เดรสยาวสไตล์เกาหลี</p>
+<div class="mt-auto flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">฿ 890</span>
+<button class="bg-primary-container text-on-background font-label-md text-label-md px-4 py-2 rounded-md hover:-translate-y-0.5 hover:shadow-md transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                เพิ่มลงตะกร้า
+                            </button>
+</div>
 </div>
 </article>
 <!-- Product Card 2 -->
-<article class="group cursor-pointer flex flex-col rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] bg-surface-container-lowest transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)]">
-<div class="w-full aspect-[4/5] bg-surface-container relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean product shot of a minimalist cream-colored midi skirt with a subtle slit. The skirt is presented against a pure white background with soft, diffused lighting. The fabric looks soft and flowing. High-quality e-commerce photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChyQBp1MWuR9LyApq78x4y_bP9yWxEAgqkRZTgnaxn6HAQRbcZZ8LdjMNYl6DVo77zR_2HKeMRxbkBKSs8bEH389kH7uT0B8ayGrxYs_mIGd5psCIho_CLn3nACo4Cskj2v9K4g4GZFoAApyMT3W3z7PlatWnccEFucocxyjvqh2__ZDw0ppokeELCKX2iw3MyvBxcDSEsRIm5TFk4B7KbY7iylHPgl9jd4-MQn8UJIaqXHuDJISN4"/>
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] flex flex-col group hover:-translate-y-1 transition-transform duration-300">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A beautifully styled photograph of a pastel blue cropped top. The top is made of soft ribbed knit material. The lighting is soft and airy, highlighting the texture of the fabric. The overall mood is calm, modern, and feminine, fitting a cute but professional e-commerce visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxhuHqtrHAhu8T1T8f3GVyIHb3Nrf6SqH3x7Jfa6kKS-ryZ1c7vpbdFQuldXCV_N7q7bZf_YQnTyktL-BoMTTSRXq39iVkVQi1zgS9OUZxHqHwKUStcn4ElTtzUDrVEpkLfbwQxGX1rU71u8gDD5SEeyOSb1BmGLKH-QCwf2mE-qCFHsNhjtZ9FYJzN8CoOlhRzHgcebqNNGZwJgvk3cmSafnq3S2frhD9qxpM4ZDDm4BdK51aGCFZ"/>
 </div>
-<div class="p-4 flex flex-col flex-grow justify-between bg-surface-container-lowest">
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-background line-clamp-1 mb-1">กระโปรงมิดิ สีครีม</h3>
-<p class="font-label-md text-label-md text-primary">฿890</p>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">เสื้อไหมพรมครอปสีฟ้า</h3>
 </div>
-<button class="mt-4 w-full py-2 border border-primary text-primary rounded-md font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors">
-                            เพิ่มลงตะกร้า
-                        </button>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">เสื้อแขนสั้น ผ้านิ่มใส่สบาย</p>
+<div class="mt-auto flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">฿ 450</span>
+<button class="bg-primary-container text-on-background font-label-md text-label-md px-4 py-2 rounded-md hover:-translate-y-0.5 hover:shadow-md transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                เพิ่มลงตะกร้า
+                            </button>
+</div>
 </div>
 </article>
 <!-- Product Card 3 -->
-<article class="group cursor-pointer flex flex-col rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] bg-surface-container-lowest transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)]">
-<div class="w-full aspect-[4/5] bg-surface-container relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A soft, aesthetic product shot of a delicate pastel pink knit cardigan. The cardigan is folded neatly on a light wood surface with soft morning light casting gentle shadows. The mood is cozy, feminine, and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9MnbKPdDZG036rTzXn98YERuH450P07o2-7X7--0lcxml5Ve8OsvJuwvdburNXer4_l5eGwAs9_8iEEM7uL2U_54SyEiJMVXTR6FltOliuBAVopVCQwtK7BFbr3CVsh2o1---mNT-sXeFgojYDhGwI_xKNr_oZ64jlAzMEaOuyPlR_e5tfVtdwu8BlUG2r9K1pYBxF0Z7LnayzrEGxHCcWtyuaF6afnkyozzFhRVTrupP_pYEqY2H"/>
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] flex flex-col group hover:-translate-y-1 transition-transform duration-300">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<div class="absolute top-0 left-0 bg-secondary text-on-secondary font-label-md text-[10px] px-2 py-1 rounded-br-lg z-10">BEST SELLER</div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist editorial style photo of a light yellow midi skirt with floral patterns. The skirt is draped elegantly. High-key soft lighting emphasizes the pastel color palette and soft shapes. The setting suggests a premium, curated fashion boutique." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkrxgBe5-u4VWCsMaenHLsCLTfI3YxM80_wTENHS3bkBcUH5rnCZZgHWt6EktU378xYcBP6Tok2vWd73UzsbcnvIN5OYsbE4lFUvO-KMnFVVHJsAnO-S1OMrSqKOt667Z9knAnigG7vMc6CsJm0IyWrsviBtOMuLlxm6DUQjjCsLcAcjyB42lJWXGJF5dWyYawRf9K_-xbRinrZ1-WyqxFnK7ZEsZSMf7ONz4FmwvsIoQ8oNK8aCPm"/>
 </div>
-<div class="p-4 flex flex-col flex-grow justify-between bg-surface-container-lowest">
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-background line-clamp-1 mb-1">เสื้อคาร์ดิแกนไหมพรม</h3>
-<p class="font-label-md text-label-md text-primary">฿950</p>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">กระโปรงยาวลายดอกไม้</h3>
 </div>
-<button class="mt-4 w-full py-2 border border-primary text-primary rounded-md font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors">
-                            เพิ่มลงตะกร้า
-                        </button>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">กระโปรงทรงเอ สีเหลืองพาสเทล</p>
+<div class="mt-auto flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">฿ 690</span>
+<button class="bg-primary-container text-on-background font-label-md text-label-md px-4 py-2 rounded-md hover:-translate-y-0.5 hover:shadow-md transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                เพิ่มลงตะกร้า
+                            </button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] flex flex-col group hover:-translate-y-1 transition-transform duration-300">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, professional e-commerce product shot of a delicate white lace camisole top. The background is a soft pastel pink to create a harmonious contrast. The lighting is diffused, giving a soft minimalism aesthetic that appeals to young professionals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwUnYBCAfbYgWXQJpqgv_sKA7G2usrwCRymQ0xBS7hUEr5N4PJyR-TBnaqx2hJ49bee7bxfKOnuHm1I2ZM0e4COBJYB9xy2huEYEmOCXiqG3POG53MRUexKdgVko8FLGMvYGAUeO7Im7agImsg_3WIo6umPNExqicZyLRvK3eVdOAzWKEFZEsfrzQjtWT49_k0punD-OIGhgrLcODLfahiDBeMZRiF1R6ORhbG3k0u6xB8pOdZvJen"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">เสื้อสายเดี่ยวลูกไม้ขาว</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">สไตล์มินิมอล แมทช์ง่าย</p>
+<div class="mt-auto flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">฿ 390</span>
+<button class="bg-primary-container text-on-background font-label-md text-label-md px-4 py-2 rounded-md hover:-translate-y-0.5 hover:shadow-md transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                เพิ่มลงตะกร้า
+                            </button>
+</div>
 </div>
 </article>
 </div>
-<a class="sm:hidden flex justify-center items-center gap-2 mt-8 py-3 w-full border border-outline-variant rounded-md font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" href="#">
-                ดูสินค้าทั้งหมด
-            </a>
-</section>
-<!-- Why Choose Us Section (Glassmorphism inspired cards) -->
-<section class="py-xl bg-surface-container-low w-full relative overflow-hidden">
-<!-- Decorative blur blobs -->
-<div class="absolute top-0 left-0 w-64 h-64 bg-primary-container rounded-full mix-blend-multiply filter blur-3xl opacity-50 -translate-x-1/2 -translate-y-1/2"></div>
-<div class="absolute bottom-0 right-0 w-80 h-80 bg-secondary-container rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
-<div class="relative z-10 max-w-container-max mx-auto px-base md:px-xl">
-<div class="text-center mb-12">
-<h2 class="font-headline-lg text-headline-lg text-on-background">ทำไมต้อง Jan Fashion</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-lg mx-auto">เราใส่ใจในทุกรายละเอียด เพื่อให้คุณได้รับประสบการณ์ช้อปปิ้งที่ดีที่สุด</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Feature 1 -->
-<div class="bg-surface-container-lowest/80 backdrop-blur-md p-8 rounded-2xl shadow-[0_4px_12px_rgba(232,180,188,0.1)] border border-surface-container-highest flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 text-on-primary-container">
-<span class="material-symbols-outlined text-3xl" data-weight="fill">local_shipping</span>
-</div>
-<h3 class="font-headline-md text-headline-sm font-semibold text-on-background mb-3">จัดส่งฟรี</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">เมื่อสั่งซื้อครบ 1,000 บาท จัดส่งรวดเร็วถึงหน้าบ้านคุณ</p>
-</div>
-<!-- Feature 2 -->
-<div class="bg-surface-container-lowest/80 backdrop-blur-md p-8 rounded-2xl shadow-[0_4px_12px_rgba(232,180,188,0.1)] border border-surface-container-highest flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 text-on-primary-container">
-<span class="material-symbols-outlined text-3xl" data-weight="fill">verified</span>
-</div>
-<h3 class="font-headline-md text-headline-sm font-semibold text-on-background mb-3">รับประกันคุณภาพ</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">สินค้าทุกชิ้นผ่านการตรวจสอบคุณภาพอย่างละเอียดก่อนส่งมอบ</p>
-</div>
-<!-- Feature 3 -->
-<div class="bg-surface-container-lowest/80 backdrop-blur-md p-8 rounded-2xl shadow-[0_4px_12px_rgba(232,180,188,0.1)] border border-surface-container-highest flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 text-on-primary-container">
-<span class="material-symbols-outlined text-3xl" data-weight="fill">styler</span>
-</div>
-<h3 class="font-headline-md text-headline-sm font-semibold text-on-background mb-3">สไตล์ทันสมัย</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">อัปเดตเทรนด์แฟชั่นใหม่ๆ อยู่เสมอ ให้คุณดูดีในทุกๆ วัน</p>
-</div>
-</div>
+<!-- Pagination -->
+<div class="mt-xl flex justify-center items-center gap-2">
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-primary-container text-on-primary-container font-label-md font-bold transition-colors">1</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md">2</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md">3</button>
+<span class="text-on-surface-variant px-1">...</span>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md">8</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="full-width bottom bg-surface-container dark:bg-surface-container-highest pt-xl pb-8">
-<div class="flex flex-col md:flex-row justify-between items-start gap-lg w-full px-base md:px-xl max-w-container-max mx-auto mb-12">
-<div class="flex flex-col gap-4 max-w-sm">
-<a class="flex items-center gap-2" href="#">
-<img alt="Jan Fashion Logo" class="h-8 w-auto object-contain grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBuQmhMKJI8Yr2UFNWHlRkg9ANAq4BxNDTZDp8LnJawo5s7bN2oJTcKIlIGdhXApC7Ka74xdppnL9ADPrpSpp4Hfvgp7rdfV2DO7pLk4Cp6Wo6N6drcbtPU6xz4D5dJPlnW7cqUTJXXpMoh9pIOmxLr-orq4a991YFZKwGaMRAvsPStWJU9-TX0EsxYUQyc06VVTvTZ8XvBjsSei6YXugTPxP_EdbHyg3heNb6GC07W1n1V20Ao180"/>
+<footer class="bg-surface-container dark:bg-surface-container-highest text-primary dark:text-inverse-primary font-body-sm text-body-sm font-label-md text-label-md w-full bg-surface-container dark:bg-surface-container-high mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-start gap-lg w-full px-base md:px-xl py-xl max-w-container-max mx-auto">
+<div class="flex flex-col gap-sm">
 <span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-inverse-on-surface">Jan Fashion</span>
-</a>
-<p class="font-body-sm text-body-sm text-on-surface-variant">แบรนด์เสื้อผ้าที่เข้าใจผู้หญิงยุคใหม่ เน้นความเรียบง่าย ใส่สบาย แต่ยังคงความดูดีมีสไตล์</p>
+<p class="text-on-surface-variant font-body-sm max-w-xs">ร้านเสื้อผ้าแฟชั่นสไตล์เกาหลี มินิมอล สำหรับผู้หญิงยุคใหม่ที่รักการแต่งตัว</p>
 </div>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full md:w-auto">
-<div class="flex flex-col gap-3">
-<h4 class="font-label-md text-label-md text-on-background font-bold mb-2">ช่วยเหลือ</h4>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">นโยบายความเป็นส่วนตัว</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">เงื่อนไขการใช้บริการ</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">การจัดส่งและคืนสินค้า</a>
+<nav class="flex flex-col md:flex-row gap-lg md:gap-xl">
+<div class="flex flex-col gap-sm">
+<h4 class="font-headline-sm text-headline-sm text-on-surface dark:text-inverse-on-surface mb-2">ลิงก์ที่เป็นประโยชน์</h4>
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">Shipping &amp; Returns</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">Newsletter</a>
 </div>
-<div class="flex flex-col gap-3">
-<h4 class="font-label-md text-label-md text-on-background font-bold mb-2">เมนู</h4>
-<a class="font-body-sm text-body-sm text-primary dark:text-inverse-primary font-bold hover:underline transition-all duration-200" href="#">หน้าแรก</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">สินค้าทั้งหมด</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">จดหมายข่าว</a>
+</nav>
 </div>
-<div class="flex flex-col gap-3 col-span-2 sm:col-span-1">
-<h4 class="font-label-md text-label-md text-on-background font-bold mb-2">ติดตามเรา</h4>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
-<span class="material-symbols-outlined">share</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
-<span class="material-symbols-outlined">photo_camera</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="w-full px-base md:px-xl max-w-container-max mx-auto border-t border-outline-variant/30 pt-8 flex justify-center md:justify-between items-center">
-<p class="font-body-sm text-body-sm font-label-md text-label-md text-on-surface-variant text-center md:text-left w-full">
-                © 2024 Jan Fashion. All rights reserved.
-            </p>
+<div class="w-full border-t border-surface-variant/50 py-4 text-center">
+<p class="text-on-surface-variant font-body-sm">© 2024 Jan Fashion. All rights reserved.</p>
 </div>
 </footer>
 </body></html>

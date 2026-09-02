@@ -1,389 +1,415 @@
 <!DOCTYPE html>
-
-<html lang="th"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jan Fashion - Home</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-background": "#1e1b1b",
-                    "on-error": "#ffffff",
-                    "secondary-container": "#e6e5b9",
-                    "surface-container-lowest": "#ffffff",
-                    "error": "#ba1a1a",
-                    "surface-container-low": "#faf2f2",
-                    "on-secondary-fixed": "#1d1d03",
-                    "surface-container-high": "#efe6e7",
-                    "primary": "#78555e",
-                    "secondary": "#60603e",
-                    "on-secondary-container": "#666643",
-                    "surface": "#fff8f8",
-                    "surface-container": "#f4ecec",
-                    "outline": "#817476",
-                    "secondary-fixed-dim": "#cac99f",
-                    "primary-fixed-dim": "#e7bbc6",
-                    "tertiary-fixed": "#e2e2e2",
-                    "surface-bright": "#fff8f8",
-                    "on-primary-fixed-variant": "#5e3e47",
-                    "on-secondary": "#ffffff",
-                    "on-primary-container": "#7a5761",
-                    "primary-fixed": "#ffd9e2",
-                    "on-tertiary": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "background": "#fff8f8",
-                    "tertiary": "#5d5f5f",
-                    "on-surface": "#1e1b1b",
-                    "on-secondary-fixed-variant": "#484828",
-                    "surface-variant": "#e9e0e1",
-                    "on-error-container": "#93000a",
-                    "on-tertiary-fixed-variant": "#454747",
-                    "secondary-fixed": "#e6e5b9",
-                    "inverse-surface": "#332f30",
-                    "inverse-on-surface": "#f7efef",
-                    "on-tertiary-fixed": "#1a1c1c",
-                    "on-primary-fixed": "#2d141c",
-                    "on-surface-variant": "#4f4446",
-                    "tertiary-fixed-dim": "#c6c6c7",
-                    "surface-container-highest": "#e9e0e1",
-                    "on-primary": "#ffffff",
-                    "inverse-primary": "#e7bbc6",
-                    "tertiary-container": "#dddddd",
-                    "outline-variant": "#d3c3c5",
-                    "surface-dim": "#e0d8d8",
-                    "surface-tint": "#78555e",
-                    "on-tertiary-container": "#606161",
-                    "primary-container": "#ffd1dc"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "sm": "12px",
-                    "base": "8px",
-                    "xl": "64px",
-                    "xs": "4px",
-                    "lg": "40px",
-                    "gutter": "20px",
-                    "md": "24px",
-                    "container-max": "1200px"
-            },
-            "fontFamily": {
-                    "headline-sm": [
-                            "Montserrat"
-                    ],
-                    "body-sm": [
-                            "Open Sans"
-                    ],
-                    "display-lg": [
-                            "Montserrat"
-                    ],
-                    "body-md": [
-                            "Open Sans"
-                    ],
-                    "headline-lg-mobile": [
-                            "Montserrat"
-                    ],
-                    "body-lg": [
-                            "Open Sans"
-                    ],
-                    "label-md": [
-                            "Montserrat"
-                    ],
-                    "headline-md": [
-                            "Montserrat"
-                    ],
-                    "headline-lg": [
-                            "Montserrat"
-                    ]
-            },
-            "fontSize": {
-                    "headline-sm": [
-                            "20px",
-                            {
-                                    "lineHeight": "1.4",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "body-sm": [
-                            "14px",
-                            {
-                                    "lineHeight": "1.5",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "display-lg": [
-                            "48px",
-                            {
-                                    "lineHeight": "1.2",
-                                    "letterSpacing": "-0.02em",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "body-md": [
-                            "16px",
-                            {
-                                    "lineHeight": "1.6",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "headline-lg-mobile": [
-                            "28px",
-                            {
-                                    "lineHeight": "1.3",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "body-lg": [
-                            "18px",
-                            {
-                                    "lineHeight": "1.6",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "label-md": [
-                            "14px",
-                            {
-                                    "lineHeight": "1.0",
-                                    "letterSpacing": "0.05em",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "headline-md": [
-                            "24px",
-                            {
-                                    "lineHeight": "1.4",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "headline-lg": [
-                            "32px",
-                            {
-                                    "lineHeight": "1.3",
-                                    "fontWeight": "600"
-                            }
-                    ]
-            }
-    },
-        },
+<html lang="th">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jan Fashion - ร้านแฟชั่นออนไลน์</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FDDCE2",
+            secondary: "#E85A7F",
+            dark: "#7A2E46",
+            light: "#FFF0F5",
+            pinksoft: "#FFE6ED"
+          },
+          fontFamily: {
+            sans: ["'Noto Sans Thai'", "sans-serif"],
+          },
+        }
       }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined.fill {
-            font-variation-settings: 'FILL' 1;
-        }
-    </style>
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow-sm {
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  </style>
+  <style>
+    body {
+      font-family: 'Noto Sans Thai', sans-serif;
+      background-color: #FFF0F5;
+    }
+    .nav-item:hover {
+      color: #E85A7F;
+      border-bottom: 2px solid #E85A7F;
+    }
+    .btn-pink {
+      background: linear-gradient(135deg, #E85A7F 0%, #F07898 100%);
+      transition: all 0.3s ease;
+    }
+    .btn-pink:hover {
+      background: linear-gradient(135deg, #D64A6E 0%, #E86888 100%);
+      transform: scale(1.03);
+    }
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(232, 90, 127, 0.15);
+    }
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+    .fashion-illustration {
+      filter: drop-shadow(0 4px 10px rgba(122, 46, 70, 0.25));
+    }
+  </style>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen">
-<!-- TopAppBar -->
-<header class="sticky docked full-width top-0 z-50 bg-surface dark:bg-inverse-surface shadow-sm transition-all duration-300">
-<div class="flex justify-between items-center w-full px-base md:px-xl py-4 max-w-container-max mx-auto">
-<!-- Brand Logo -->
-<a class="flex items-center gap-2 hover:opacity-80 transition-opacity" href="#">
-<img alt="Jan Fashion Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBuQmhMKJI8Yr2UFNWHlRkg9ANAq4BxNDTZDp8LnJawo5s7bN2oJTcKIlIGdhXApC7Ka74xdppnL9ADPrpSpp4Hfvgp7rdfV2DO7pLk4Cp6Wo6N6drcbtPU6xz4D5dJPlnW7cqUTJXXpMoh9pIOmxLr-orq4a991YFZKwGaMRAvsPStWJU9-TX0EsxYUQyc06VVTvTZ8XvBjsSei6YXugTPxP_EdbHyg3heNb6GC07W1n1V20Ao180"/>
-<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary hidden md:block">Jan Fashion</span>
-</a>
-<!-- Navigation Links (Desktop) -->
-<nav class="hidden md:flex gap-lg">
-<a class="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 transition-colors hover:opacity-80" href="#">หน้าแรก</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80" href="#">สินค้าทั้งหมด</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80" href="#">เกี่ยวกับเรา</a>
-<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80" href="#">ติดต่อเรา</a>
-</nav>
-<!-- Trailing Icons -->
-<div class="flex items-center gap-4">
-<button aria-label="Search" class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container-high Active:scale-95 duration-150">
-<span class="material-symbols-outlined">search</span>
-</button>
-<button aria-label="Profile" class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container-high Active:scale-95 duration-150 hidden sm:block">
-<span class="material-symbols-outlined">person</span>
-</button>
-<button aria-label="Cart" class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container-high Active:scale-95 duration-150 relative">
-<span class="material-symbols-outlined">shopping_bag</span>
-<span class="absolute top-1 right-1 flex h-3 w-3">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-</span>
-</button>
-</div>
-</div>
-</header>
-<main class="flex-grow flex flex-col">
-<!-- Hero Section -->
-<section class="relative w-full h-[600px] md:h-[700px] flex items-center bg-surface-container-low overflow-hidden">
-<div class="absolute inset-0 w-full h-full">
-<img class="w-full h-full object-cover object-center" data-alt="A high-quality, editorial style photograph of an elegant young woman wearing modern, soft pastel minimalist clothing. She is standing in a brightly lit, minimalist studio space with gentle, diffused natural light. The aesthetic is clean, soft minimalism, prioritizing soft pinks and cream tones. She exudes confidence and calm, appealing to a young professional demographic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAorCHRXJfJBetdufxt30PgGHEmgvXJmqeEG3mwEvri9O4Xe-LZw1Vqyd4Zygh2YHcdDYWGFtCv7pZNe9Cdjh9E2lxzLyfU34j1owaH1frvakX44mJVqlgcv7411oqyoEF1336LAgBp92BGXy799mgfAKheQY4Zt1Haz_8VCMLsOdhTVMHRsZ_k33gjIQw_CpVL3g_hmwUbIaIzWspLA9VZyyp2lIUHR0fGJdnUrK2IwR2-B-I6A6NY"/>
-<div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent md:w-2/3"></div>
-</div>
-<div class="relative z-10 w-full max-w-container-max mx-auto px-base md:px-xl flex flex-col items-start gap-6">
-<span class="inline-block py-1 px-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md tracking-wider">NEW COLLECTION</span>
-<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-background max-w-lg leading-tight">
-                    สัมผัสความนุ่มนวล<br/>ในสไตล์คุณ
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
-                    คอลเลกชันใหม่ล่าสุด ลดพิเศษ 20% สำหรับลูกค้าออนไลน์เท่านั้น ช้อปเลยวันนี้!
-                </p>
-<button class="mt-4 px-8 py-3 bg-primary text-on-primary rounded-md font-label-md text-label-md hover:bg-primary/90 transition-all duration-200 shadow-[0_4px_12px_rgba(232,180,188,0.25)] hover:shadow-[0_8px_24px_rgba(232,180,188,0.35)] hover:-translate-y-0.5 active:scale-95">
-                    ช้อปเลย
-                </button>
-</div>
-</section>
-<!-- Popular Items Section (Bento Grid Style) -->
-<section class="py-xl bg-background w-full max-w-container-max mx-auto px-base md:px-xl">
-<div class="flex justify-between items-end mb-lg">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-on-background">สินค้ายอดนิยม</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">สไตล์ที่ได้รับความไว้วางใจจากลูกค้า</p>
-</div>
-<a class="hidden sm:flex items-center gap-1 font-label-md text-label-md text-primary hover:underline group" href="#">
-                    ดูทั้งหมด
-                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
-<!-- Product Card 1 (Large Focus) -->
-<article class="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 group cursor-pointer relative rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] bg-surface-container-lowest transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)]">
-<div class="w-full h-full min-h-[400px] bg-surface-container relative">
-<img class="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105" data-alt="A flat lay photograph of a beautiful pastel pink oversized blazer paired with a cream silk camisole. The items are neatly arranged on a clean white surface with subtle ambient shadows. The lighting is soft and bright, highlighting the texture of the fabrics. Minimalist and elegant composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA2UGp85Pe0yeufhPrb0SuGcWBoJLXA4ZVnzIXQB8o9XyswAfySWHypeZcgwAQaVgkukpbqJzgXSyMy0nZ-22tDn_p4928OQEQ_TgAMhKQ9Sw-EI32gumAn4vFCbFSx9e84mg3zrfKjd9B1d7Opj_dp-lGWyHYfs_4ia2-DaGRLzsrp1SSOygaRJNWUWochLeJGNhHVB5TPzuAAeXUsxMGOBg8Gp5MMvyV0jwfIp5m9vpTBxol0Y7d"/>
-<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full font-label-md text-xs">Best Seller</div>
-</div>
-<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background/95 via-background/80 to-transparent backdrop-blur-sm flex justify-between items-end">
-<div>
-<h3 class="font-headline-md text-headline-md text-on-background mb-1">เบลเซอร์สีพาสเทล ทรงโอเวอร์ไซส์</h3>
-<p class="font-label-md text-label-md text-primary">฿1,290</p>
-</div>
-<button class="bg-surface-container-lowest text-on-surface p-3 rounded-full shadow-sm hover:bg-primary hover:text-on-primary transition-colors active:scale-95">
-<span class="material-symbols-outlined">shopping_bag</span>
-</button>
-</div>
-</article>
-<!-- Product Card 2 -->
-<article class="group cursor-pointer flex flex-col rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] bg-surface-container-lowest transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)]">
-<div class="w-full aspect-[4/5] bg-surface-container relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean product shot of a minimalist cream-colored midi skirt with a subtle slit. The skirt is presented against a pure white background with soft, diffused lighting. The fabric looks soft and flowing. High-quality e-commerce photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChyQBp1MWuR9LyApq78x4y_bP9yWxEAgqkRZTgnaxn6HAQRbcZZ8LdjMNYl6DVo77zR_2HKeMRxbkBKSs8bEH389kH7uT0B8ayGrxYs_mIGd5psCIho_CLn3nACo4Cskj2v9K4g4GZFoAApyMT3W3z7PlatWnccEFucocxyjvqh2__ZDw0ppokeELCKX2iw3MyvBxcDSEsRIm5TFk4B7KbY7iylHPgl9jd4-MQn8UJIaqXHuDJISN4"/>
-</div>
-<div class="p-4 flex flex-col flex-grow justify-between bg-surface-container-lowest">
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-background line-clamp-1 mb-1">กระโปรงมิดิ สีครีม</h3>
-<p class="font-label-md text-label-md text-primary">฿890</p>
-</div>
-<button class="mt-4 w-full py-2 border border-primary text-primary rounded-md font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors">
-                            เพิ่มลงตะกร้า
-                        </button>
-</div>
-</article>
-<!-- Product Card 3 -->
-<article class="group cursor-pointer flex flex-col rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] bg-surface-container-lowest transition-all hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)]">
-<div class="w-full aspect-[4/5] bg-surface-container relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A soft, aesthetic product shot of a delicate pastel pink knit cardigan. The cardigan is folded neatly on a light wood surface with soft morning light casting gentle shadows. The mood is cozy, feminine, and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9MnbKPdDZG036rTzXn98YERuH450P07o2-7X7--0lcxml5Ve8OsvJuwvdburNXer4_l5eGwAs9_8iEEM7uL2U_54SyEiJMVXTR6FltOliuBAVopVCQwtK7BFbr3CVsh2o1---mNT-sXeFgojYDhGwI_xKNr_oZ64jlAzMEaOuyPlR_e5tfVtdwu8BlUG2r9K1pYBxF0Z7LnayzrEGxHCcWtyuaF6afnkyozzFhRVTrupP_pYEqY2H"/>
-</div>
-<div class="p-4 flex flex-col flex-grow justify-between bg-surface-container-lowest">
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-background line-clamp-1 mb-1">เสื้อคาร์ดิแกนไหมพรม</h3>
-<p class="font-label-md text-label-md text-primary">฿950</p>
-</div>
-<button class="mt-4 w-full py-2 border border-primary text-primary rounded-md font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors">
-                            เพิ่มลงตะกร้า
-                        </button>
-</div>
-</article>
-</div>
-<a class="sm:hidden flex justify-center items-center gap-2 mt-8 py-3 w-full border border-outline-variant rounded-md font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" href="#">
-                ดูสินค้าทั้งหมด
-            </a>
-</section>
-<!-- Why Choose Us Section (Glassmorphism inspired cards) -->
-<section class="py-xl bg-surface-container-low w-full relative overflow-hidden">
-<!-- Decorative blur blobs -->
-<div class="absolute top-0 left-0 w-64 h-64 bg-primary-container rounded-full mix-blend-multiply filter blur-3xl opacity-50 -translate-x-1/2 -translate-y-1/2"></div>
-<div class="absolute bottom-0 right-0 w-80 h-80 bg-secondary-container rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
-<div class="relative z-10 max-w-container-max mx-auto px-base md:px-xl">
-<div class="text-center mb-12">
-<h2 class="font-headline-lg text-headline-lg text-on-background">ทำไมต้อง Jan Fashion</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-lg mx-auto">เราใส่ใจในทุกรายละเอียด เพื่อให้คุณได้รับประสบการณ์ช้อปปิ้งที่ดีที่สุด</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Feature 1 -->
-<div class="bg-surface-container-lowest/80 backdrop-blur-md p-8 rounded-2xl shadow-[0_4px_12px_rgba(232,180,188,0.1)] border border-surface-container-highest flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 text-on-primary-container">
-<span class="material-symbols-outlined text-3xl" data-weight="fill">local_shipping</span>
-</div>
-<h3 class="font-headline-md text-headline-sm font-semibold text-on-background mb-3">จัดส่งฟรี</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">เมื่อสั่งซื้อครบ 1,000 บาท จัดส่งรวดเร็วถึงหน้าบ้านคุณ</p>
-</div>
-<!-- Feature 2 -->
-<div class="bg-surface-container-lowest/80 backdrop-blur-md p-8 rounded-2xl shadow-[0_4px_12px_rgba(232,180,188,0.1)] border border-surface-container-highest flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 text-on-primary-container">
-<span class="material-symbols-outlined text-3xl" data-weight="fill">verified</span>
-</div>
-<h3 class="font-headline-md text-headline-sm font-semibold text-on-background mb-3">รับประกันคุณภาพ</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">สินค้าทุกชิ้นผ่านการตรวจสอบคุณภาพอย่างละเอียดก่อนส่งมอบ</p>
-</div>
-<!-- Feature 3 -->
-<div class="bg-surface-container-lowest/80 backdrop-blur-md p-8 rounded-2xl shadow-[0_4px_12px_rgba(232,180,188,0.1)] border border-surface-container-highest flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
-<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 text-on-primary-container">
-<span class="material-symbols-outlined text-3xl" data-weight="fill">styler</span>
-</div>
-<h3 class="font-headline-md text-headline-sm font-semibold text-on-background mb-3">สไตล์ทันสมัย</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">อัปเดตเทรนด์แฟชั่นใหม่ๆ อยู่เสมอ ให้คุณดูดีในทุกๆ วัน</p>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="full-width bottom bg-surface-container dark:bg-surface-container-highest pt-xl pb-8">
-<div class="flex flex-col md:flex-row justify-between items-start gap-lg w-full px-base md:px-xl max-w-container-max mx-auto mb-12">
-<div class="flex flex-col gap-4 max-w-sm">
-<a class="flex items-center gap-2" href="#">
-<img alt="Jan Fashion Logo" class="h-8 w-auto object-contain grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBuQmhMKJI8Yr2UFNWHlRkg9ANAq4BxNDTZDp8LnJawo5s7bN2oJTcKIlIGdhXApC7Ka74xdppnL9ADPrpSpp4Hfvgp7rdfV2DO7pLk4Cp6Wo6N6drcbtPU6xz4D5dJPlnW7cqUTJXXpMoh9pIOmxLr-orq4a991YFZKwGaMRAvsPStWJU9-TX0EsxYUQyc06VVTvTZ8XvBjsSei6YXugTPxP_EdbHyg3heNb6GC07W1n1V20Ao180"/>
-<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-inverse-on-surface">Jan Fashion</span>
-</a>
-<p class="font-body-sm text-body-sm text-on-surface-variant">แบรนด์เสื้อผ้าที่เข้าใจผู้หญิงยุคใหม่ เน้นความเรียบง่าย ใส่สบาย แต่ยังคงความดูดีมีสไตล์</p>
-</div>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full md:w-auto">
-<div class="flex flex-col gap-3">
-<h4 class="font-label-md text-label-md text-on-background font-bold mb-2">ช่วยเหลือ</h4>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">นโยบายความเป็นส่วนตัว</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">เงื่อนไขการใช้บริการ</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">การจัดส่งและคืนสินค้า</a>
-</div>
-<div class="flex flex-col gap-3">
-<h4 class="font-label-md text-label-md text-on-background font-bold mb-2">เมนู</h4>
-<a class="font-body-sm text-body-sm text-primary dark:text-inverse-primary font-bold hover:underline transition-all duration-200" href="#">หน้าแรก</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">สินค้าทั้งหมด</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">จดหมายข่าว</a>
-</div>
-<div class="flex flex-col gap-3 col-span-2 sm:col-span-1">
-<h4 class="font-label-md text-label-md text-on-background font-bold mb-2">ติดตามเรา</h4>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
-<span class="material-symbols-outlined">share</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
-<span class="material-symbols-outlined">photo_camera</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="w-full px-base md:px-xl max-w-container-max mx-auto border-t border-outline-variant/30 pt-8 flex justify-center md:justify-between items-center">
-<p class="font-body-sm text-body-sm font-label-md text-label-md text-on-surface-variant text-center md:text-left w-full">
-                © 2024 Jan Fashion. All rights reserved.
+<body class="font-sans text-gray-800 bg-light">
+
+  <!-- แถบแจ้งเตือนด้านบน -->
+  <div class="bg-primary text-dark text-center py-2 text-sm font-medium">
+    จัดส่งฟรีทั่วประเทศ เมื่อสั่งครบ 1,000 บาท
+  </div>
+
+  <!-- ส่วนหัวเว็บ -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex items-center justify-between">
+        <!-- โลโก้ -->
+        <a href="#" class="flex items-center gap-2">
+          <img src="https://i.imgur.com/8WXrZ8L.png" alt="Jan Fashion Logo" class="h-14 w-auto">
+        </a>
+
+        <!-- เมนูหลัก -->
+        <nav class="hidden lg:flex items-center gap-8 text-base font-medium">
+          <a href="#" class="nav-item py-2 border-b-2 border-secondary text-secondary">หน้าแรก</a>
+          <a href="#" class="nav-item py-2">สินค้าทั้งหมด</a>
+          <a href="#" class="nav-item py-2">หมวดหมู่ <i class="fa-solid fa-chevron-down text-xs"></i></a>
+          <a href="#" class="nav-item py-2">โปรโมชั่น</a>
+          <a href="#" class="nav-item py-2">มาใหม่</a>
+          <a href="#" class="nav-item py-2">รีวิวลูกค้า</a>
+          <a href="#" class="nav-item py-2">ติดต่อเรา</a>
+        </nav>
+
+        <!-- ช่องค้นหา + ไอคอนผู้ใช้ -->
+        <div class="flex items-center gap-5">
+          <div class="relative hidden md:block">
+            <input type="text" placeholder="ค้นหาสินค้า..." class="w-60 px-4 py-2 rounded-full bg-pinksoft border-0 focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-secondary">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <button class="text-gray-700 hover:text-secondary"><i class="fa-regular fa-user text-xl"></i></button>
+          <button class="text-gray-700 hover:text-secondary"><i class="fa-regular fa-heart text-xl"></i></button>
+          <button class="text-gray-700 hover:text-secondary relative">
+            <i class="fa-solid fa-bag-shopping text-xl"></i>
+            <span class="absolute -top-2 -right-2 bg-secondary text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- แบนเนอร์หลัก -->
+    <section class="bg-gradient-to-r from-primary to-pinksoft">
+      <div class="container mx-auto px-4 py-8 md:py-16">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+          <!-- ข้อความซ้าย -->
+          <div class="md:w-1/2 space-y-4">
+            <p class="text-lg text-dark/80 italic">New Collection</p>
+            <h1 class="text-5xl md:text-6xl font-bold text-dark leading-tight">
+              SUMMER <br> LOOK <i class="fa-solid fa-heart text-secondary text-3xl"></i>
+            </h1>
+            <p class="text-base text-dark/70 max-w-sm">
+              แต่งตัวรับซัมเมอร์ <br> สไตล์คุณในแบบที่เป็นตัวเอง
             </p>
-</div>
-</footer>
-</body></html>
+            <button class="btn-pink text-white px-8 py-3 rounded-full font-semibold shadow-md">ช้อปเลย</button>
+          </div>
+
+          <!-- ภาพแฟชั่นหรูหรา -->
+          <div class="md:w-1/2 relative">
+            <div class="flex gap-3 items-end">
+              <img src="https://images.unsplash.com/photo-1551489186-cf87267129d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="แฟชั่นฤดูร้อน" class="w-1/3 rounded-xl object-cover h-80 fashion-illustration">
+              <img src="https://images.unsplash.com/photo-1593030760247-8d9158262d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="แฟชั่นฤดูร้อน" class="w-1/3 rounded-xl object-cover h-96 fashion-illustration">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="แฟชั่นฤดูร้อน" class="w-1/3 rounded-xl object-cover h-80 fashion-illustration">
+            </div>
+
+            <!-- ข้อมูลด้านขวา -->
+            <div class="absolute right-4 top-0 space-y-3">
+              <div class="bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-sm w-44">
+                <p class="text-sm font-medium flex items-center gap-2"><i class="fa-solid fa-truck text-secondary"></i> จัดส่งฟรี</p>
+                <p class="text-xs text-gray-600">เมื่อสั่งครบ 1,000.-</p>
+              </div>
+              <div class="bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-sm w-44">
+                <p class="text-sm font-medium flex items-center gap-2"><i class="fa-solid fa-rotate-right text-secondary"></i> เปลี่ยน/คืนสินค้า</p>
+                <p class="text-xs text-gray-600">ภายใน 7 วัน</p>
+              </div>
+              <div class="bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-sm w-44">
+                <p class="text-sm font-medium flex items-center gap-2"><i class="fa-solid fa-shield-halved text-secondary"></i> มั่นใจ 100%</p>
+                <p class="text-xs text-gray-600">ของแท้ คุณภาพดี</p>
+              </div>
+            </div>
+
+            <!-- ปุ่มเลื่อนซ้ายขวา -->
+            <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md text-dark hover:bg-primary"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md text-dark hover:bg-primary"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- หมวดหมู่สินค้า -->
+    <section class="py-10 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center overflow-x-auto scrollbar-hide gap-6 pb-4">
+          <a href="#" class="category-card flex flex-col items-center gap-2 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-pinksoft flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1593030760247-8d9158262d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full rounded-full object-cover" alt="เสื้อครอป">
+            </div>
+            <span class="text-sm font-medium">เสื้อครอป</span>
+          </a>
+          <a href="#" class="category-card flex flex-col items-center gap-2 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-pinksoft flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1551489186-cf87267129d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full rounded-full object-cover" alt="เสื้อยืด">
+            </div>
+            <span class="text-sm font-medium">เสื้อยืด</span>
+          </a>
+          <a href="#" class="category-card flex flex-col items-center gap-2 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-pinksoft flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full rounded-full object-cover" alt="เสื้อแจ็คเก็ต">
+            </div>
+            <span class="text-sm font-medium">เสื้อแจ็คเก็ต</span>
+          </a>
+          <a href="#" class="category-card flex flex-col items-center gap-2 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-pinksoft flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1593030760247-8d9158262d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full rounded-full object-cover" alt="เดรส">
+            </div>
+            <span class="text-sm font-medium">เดรส</span>
+          </a>
+          <a href="#" class="category-card flex flex-col items-center gap-2 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-pinksoft flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1551489186-cf87267129d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full rounded-full object-cover" alt="กางเกง">
+            </div>
+            <span class="text-sm font-medium">กางเกง</span>
+          </a>
+          <a href="#" class="category-card flex flex-col items-center gap-2 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-pinksoft flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full rounded-full object-cover" alt="กระโปรง">
+            </div>
+            <span class="text-sm font-medium">กระโปรง</span>
+          </a>
+          <a href="#" class="category-card flex flex-col items-center gap-2 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-pinksoft flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1593030760247-8d9158262d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full rounded-full object-cover" alt="ชุดเซต">
+            </div>
+            <span class="text-sm font-medium">ชุดเซต</span>
+          </a>
+          <a href="#" class="category-card flex flex-col items-center gap-2 transition-all duration-300">
+            <div class="w-16 h-16 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-sm">NEW</div>
+            <span class="text-sm font-medium">มาใหม่</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- แถบโปรโมชั่น 3 ช่อง -->
+    <section class="py-6">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-primary/40 rounded-xl p-4 flex items-center justify-between">
+            <div>
+              <p class="text-secondary font-semibold text-lg">NEW ARRIVAL</p>
+              <p class="text-dark font-medium">สินค้าเข้าใหม่</p>
+              <button class="mt-2 bg-secondary text-white text-sm px-4 py-1 rounded-full">ช้อปเลย</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1593030760247-8d9158262d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" class="w-28 h-28 object-cover rounded-lg" alt="สินค้าใหม่">
+          </div>
+
+          <div class="bg-primary/40 rounded-xl p-4 flex items-center justify-between relative overflow-hidden">
+            <div>
+              <p class="text-secondary font-semibold text-lg">SPECIAL PROMOTION</p>
+              <p class="text-dark font-medium">ลดสูงสุด 30% <br> 5 มี.ค. - 31 มี.ค. 67</p>
+              <button class="mt-2 bg-secondary text-white text-sm px-4 py-1 rounded-full">ดูโปรโมชั่น</button>
+            </div>
+            <div class="absolute right-4 top-1/2 -translate-y-1/2 w-20 h-20 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-2xl">30%</div>
+          </div>
+
+          <div class="bg-primary/40 rounded-xl p-4 flex items-center justify-between">
+            <div>
+              <p class="text-secondary font-semibold text-lg">BEST SELLER</p>
+              <p class="text-dark font-medium">สินค้าขายดี</p>
+              <button class="mt-2 bg-secondary text-white text-sm px-4 py-1 rounded-full">ช้อปเลย</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" class="w-28 h-28 object-cover rounded-lg" alt="สินค้าขายดี">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ส่วนสินค้าแนะนำ - ปรับภาพให้ตรงกับชื่อสินค้า -->
+    <section class="py-10 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold text-dark">สินค้าแนะนำ</h2>
+          <a href="#" class="text-secondary font-medium hover:underline">ดูทั้งหมด <i class="fa-solid fa-chevron-right text-xs"></i></a>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          
+          <!-- สินค้า 1: เดรสสายเดี่ยวผูกโบว์ -->
+          <div class="product-card bg-pinksoft/50 rounded-xl overflow-hidden transition-all duration-300">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1572804013309-597a6c6e0e74?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-[3/4] object-cover" alt="เดรสสายเดี่ยวผูกโบว์">
+              <span class="absolute top-2 left-2 bg-secondary text-white text-xs px-2 py-0.5 rounded-full">-20%</span>
+            </div>
+            <div class="p-3">
+              <p class="text-sm font-medium">เดรสสายเดี่ยวผูกโบว์</p>
+              <p class="text-secondary font-bold mt-1"><span class="text-gray-400 line-through text-xs">฿400</span> ฿320</p>
+            </div>
+          </div>
+
+          <!-- สินค้า 2: เสื้อครอป+กางเกง -->
+          <div class="product-card bg-pinksoft/50 rounded-xl overflow-hidden transition-all duration-300">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-[3/4] object-cover" alt="เสื้อครอป+กางเกง">
+              <span class="absolute top-2 left-2 bg-secondary text-white text-xs px-2 py-0.5 rounded-full">NEW</span>
+            </div>
+            <div class="p-3">
+              <p class="text-sm font-medium">เสื้อครอป+กางเกง</p>
+              <p class="text-secondary font-bold mt-1"><span class="text-gray-400 line-through text-xs">฿690</span> ฿590</p>
+            </div>
+          </div>
+
+          <!-- สินค้า 3: กางเกงขายาวมวลสูง -->
+          <div class="product-card bg-pinksoft/50 rounded-xl overflow-hidden transition-all duration-300">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-[3/4] object-cover" alt="กางเกงขายาวมวลสูง">
+              <span class="absolute top-2 left-2 bg-secondary text-white text-xs px-2 py-0.5 rounded-full">NEW</span>
+            </div>
+            <div class="p-3">
+              <p class="text-sm font-medium">กางเกงขายาวมวลสูง</p>
+              <p class="text-secondary font-bold mt-1">฿450</p>
+            </div>
+          </div>
+
+          <!-- สินค้า 4: กระโปรงยีนส์สั้น -->
+          <div class="product-card bg-pinksoft/50 rounded-xl overflow-hidden transition-all duration-300">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1584670747417-594a9412fba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-[3/4] object-cover" alt="กระโปรงยีนส์สั้น">
+            </div>
+            <div class="p-3">
+              <p class="text-sm font-medium">กระโปรงยีนส์สั้น</p>
+              <p class="text-secondary font-bold mt-1">฿350</p>
+            </div>
+          </div>
+
+          <!-- สินค้า 5: เสื้อครอปผูกหน้า -->
+          <div class="product-card bg-pinksoft/50 rounded-xl overflow-hidden transition-all duration-300">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1551489186-cf87267129d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-[3/4] object-cover" alt="เสื้อครอปผูกหน้า">
+              <span class="absolute top-2 left-2 bg-secondary text-white text-xs px-2 py-0.5 rounded-full">-15%</span>
+            </div>
+            <div class="p-3">
+              <p class="text-sm font-medium">เสื้อครอปผูกหน้า</p>
+              <p class="text-secondary font-bold mt-1">฿290</p>
+            </div>
+          </div>
+
+          <!-- สินค้า 6: เสื้อเชิ้ตโอเวอร์ไซส์ -->
+          <div class="product-card bg-pinksoft/50 rounded-xl overflow-hidden transition-all duration-300">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1593030760247-8d9158262d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-[3/4] object-cover" alt="เสื้อเชิ้ตโอเวอร์ไซส์">
+            </div>
+            <div class="p-3">
+              <p class="text-sm font-medium">เสื้อเชิ้ตโอเวอร์ไซส์</p>
+              <p class="text-secondary font-bold mt-1">฿390</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- แถบบริการด้านล่าง -->
+    <section class="py-6 bg-primary/30">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+          <div class="flex items-center justify-center gap-2">
+            <i class="fa-solid fa-shield-halved text-secondary text-xl"></i>
+            <div class="text-left">
+              <p class="font-medium text-sm">ชำระเงินปลอดภัย</p>
+              <p class="text-xs text-gray-600">ระบบชำระเงินได้มาตรฐาน</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-2">
+            <i class="fa-solid fa-headset text-secondary text-xl"></i>
+            <div class="text-left">
+              <p class="font-medium text-sm">บริการลูกค้า 24 ชม.</p>
+              <p class="text-xs text-gray-600">พร้อมดูแลทุกคำถามที่สั่งซื้อ</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-2">
+            <i class="fa-solid fa-rotate-right text-secondary text-xl"></i>
+            <div class="text-left">
+              <p class="font-medium text-sm">สะดวกเต็มที่</p>
+              <p class="text-xs text-gray-600">แลกเปลี่ยนสินค้าและคืนสินค้า</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-2">
+            <i class="fa-solid fa-truck-fast text-secondary text-xl"></i>
+            <div class="text-left">
+              <p class="font-medium text-sm">ติดตามสถานะ</p>
+              <p class="text-xs text-gray-600">เช็คสถานะการจัดส่งได้ง่าย</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ส่วนท้ายเว็บ -->
+  <footer class="bg-dark text-white py-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <!-- โลโก้ท้ายเว็บ -->
+        <div class="flex flex-col items-center md:items-start">
+          <img src="https://i.imgur.com/8WXrZ8L.png" alt="Jan Fashion Logo" class="h-20 w-auto mb-2">
+          <p class="text-sm text-gray-300">Style For You — สไตล์ในแบบที่เป็นคุณ</p>
+        </div>
+
+        <!-- ลิงก์เมนู -->
+        <div class="text-center">
+          <h4 class="font-semibold text-lg mb-3">เมนูหลัก</h4>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><a href="#" class="hover:text-white transition-colors">หน้าแรก</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">สินค้าทั้งหมด</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">โปรโมชั่น</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">ติดต่อเรา</a></li>
+          </ul>
+        </div>
+
+        <!-- QR Code -->
+        <div class="flex flex-col items-center md:items-end">
+          <p class="text-sm mb-2">สแกนเพื่อเข้าเว็บไซต์</p>
+          <img src="https://i.imgur.com/9Zk7yQ9.png" alt="QR Code" class="w-28 h-28 rounded-lg bg-white p-1">
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+        <p>© 2026 Jan Fashion. สงวนลิขสิทธิ์ทั้งหมด.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

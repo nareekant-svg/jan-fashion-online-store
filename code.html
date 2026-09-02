@@ -3,10 +3,10 @@
 <html lang="th"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jan Fashion - สินค้า</title>
+<title>Jan Fashion - รายละเอียดสินค้า</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -182,264 +182,229 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .icon-fill {
-            font-variation-settings: 'FILL' 1;
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        /* Custom scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            width: 8px;
+        /* Hide scrollbar for gallery thumbnails */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
         }
-        ::-webkit-scrollbar-track {
-            background: #fff8f8;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #e9e0e1;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #d3c3c5;
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased">
-<!-- Header / TopAppBar -->
-<header class="bg-surface dark:bg-inverse-surface text-primary dark:text-inverse-primary font-headline-sm text-headline-sm font-label-md text-label-md w-full sticky top-0 z-50 bg-surface-container-lowest dark:bg-surface-dim shadow-sm">
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-surface shadow-sm transition-all duration-300">
 <div class="flex justify-between items-center w-full px-base md:px-xl py-4 max-w-container-max mx-auto">
-<!-- Brand -->
-<div class="flex items-center gap-4">
-<img alt="Jan Fashion Logo" class="h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBuQmhMKJI8Yr2UFNWHlRkg9ANAq4BxNDTZDp8LnJawo5s7bN2oJTcKIlIGdhXApC7Ka74xdppnL9ADPrpSpp4Hfvgp7rdfV2DO7pLk4Cp6Wo6N6drcbtPU6xz4D5dJPlnW7cqUTJXXpMoh9pIOmxLr-orq4a991YFZKwGaMRAvsPStWJU9-TX0EsxYUQyc06VVTvTZ8XvBjsSei6YXugTPxP_EdbHyg3heNb6GC07W1n1V20Ao180"/>
-<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary hidden sm:block">Jan Fashion</span>
-</div>
-<!-- Navigation Links -->
-<nav class="hidden md:flex gap-md items-center">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80 transition-opacity" href="#">Home</a>
-<a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 hover:opacity-80 transition-opacity" href="#">Products</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80 transition-opacity" href="#">About Us</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors hover:opacity-80 transition-opacity" href="#">Contact</a>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-on-surface hover:opacity-80 transition-opacity p-2">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<!-- Brand Logo -->
+<a class="flex items-center gap-sm" href="#">
+<img alt="Jan Fashion Logo" class="h-8 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBuQmhMKJI8Yr2UFNWHlRkg9ANAq4BxNDTZDp8LnJawo5s7bN2oJTcKIlIGdhXApC7Ka74xdppnL9ADPrpSpp4Hfvgp7rdfV2DO7pLk4Cp6Wo6N6drcbtPU6xz4D5dJPlnW7cqUTJXXpMoh9pIOmxLr-orq4a991YFZKwGaMRAvsPStWJU9-TX0EsxYUQyc06VVTvTZ8XvBjsSei6YXugTPxP_EdbHyg3heNb6GC07W1n1V20Ao180"/>
+</a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Products</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">About Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Contact</a>
 </nav>
-<!-- Trailing Actions -->
-<div class="flex items-center gap-sm">
-<button aria-label="search" class="p-2 rounded-full hover:bg-surface-variant/50 transition-colors hover:opacity-80 transition-opacity">
-<span class="material-symbols-outlined" data-icon="search">search</span>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-sm md:gap-md">
+<button class="text-on-surface hover:opacity-80 transition-opacity p-2 hidden md:block">
+<span class="material-symbols-outlined text-[24px]">search</span>
 </button>
-<button aria-label="person" class="p-2 rounded-full hover:bg-surface-variant/50 transition-colors hover:opacity-80 transition-opacity">
-<span class="material-symbols-outlined" data-icon="person">person</span>
+<button class="text-on-surface hover:opacity-80 transition-opacity p-2">
+<span class="material-symbols-outlined text-[24px]">person</span>
 </button>
-<button aria-label="shopping_bag" class="p-2 rounded-full hover:bg-surface-variant/50 transition-colors hover:opacity-80 transition-opacity relative">
-<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-<span class="absolute top-1 right-1 bg-primary text-on-primary text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">2</span>
-</button>
-<!-- Mobile Menu Toggle -->
-<button aria-label="menu" class="md:hidden p-2 rounded-full hover:bg-surface-variant/50 transition-colors">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<button class="text-on-surface hover:opacity-80 transition-opacity p-2 relative">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-primary text-on-primary text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
 </button>
 </div>
 </div>
 </header>
-<!-- Main Content Canvas -->
-<main class="flex-grow w-full max-w-container-max mx-auto px-base md:px-md lg:px-xl py-lg md:py-xl grid grid-cols-1 lg:grid-cols-12 gap-gutter md:gap-md">
-<!-- Sidebar Filters -->
-<aside class="hidden lg:block lg:col-span-3 space-y-lg pr-md">
-<div>
-<h2 class="font-headline-sm text-headline-sm text-primary mb-md border-b border-surface-variant pb-xs">หมวดหมู่</h2>
-<ul class="space-y-sm font-body-md text-on-surface-variant">
-<li>
-<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors">
-<input checked="" class="form-checkbox text-primary-container rounded border-outline-variant focus:ring-primary focus:ring-offset-surface w-5 h-5 bg-surface-container-lowest" type="checkbox"/>
-<span>ทั้งหมด (All)</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors">
-<input class="form-checkbox text-primary-container rounded border-outline-variant focus:ring-primary focus:ring-offset-surface w-5 h-5 bg-surface-container-lowest" type="checkbox"/>
-<span>เดรส (Dresses)</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors">
-<input class="form-checkbox text-primary-container rounded border-outline-variant focus:ring-primary focus:ring-offset-surface w-5 h-5 bg-surface-container-lowest" type="checkbox"/>
-<span>เสื้อ (Tops)</span>
-</label>
-</li>
-<li>
-<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors">
-<input class="form-checkbox text-primary-container rounded border-outline-variant focus:ring-primary focus:ring-offset-surface w-5 h-5 bg-surface-container-lowest" type="checkbox"/>
-<span>กระโปรง (Skirts)</span>
-</label>
-</li>
-</ul>
-</div>
-<div>
-<h2 class="font-headline-sm text-headline-sm text-primary mb-md border-b border-surface-variant pb-xs">ช่วงราคา</h2>
-<div class="space-y-sm">
-<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors font-body-md text-on-surface-variant">
-<input class="form-radio text-primary-container border-outline-variant focus:ring-primary bg-surface-container-lowest" name="price" type="radio"/>
-<span>ต่ำกว่า ฿500</span>
-</label>
-<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors font-body-md text-on-surface-variant">
-<input checked="" class="form-radio text-primary-container border-outline-variant focus:ring-primary bg-surface-container-lowest" name="price" type="radio"/>
-<span>฿500 - ฿1,000</span>
-</label>
-<label class="flex items-center gap-sm cursor-pointer hover:text-primary transition-colors font-body-md text-on-surface-variant">
-<input class="form-radio text-primary-container border-outline-variant focus:ring-primary bg-surface-container-lowest" name="price" type="radio"/>
-<span>มากกว่า ฿1,000</span>
-</label>
-</div>
-</div>
-<div>
-<h2 class="font-headline-sm text-headline-sm text-primary mb-md border-b border-surface-variant pb-xs">ขนาด (ไซส์)</h2>
-<div class="flex flex-wrap gap-xs">
-<button class="px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-primary-container hover:border-primary-container hover:text-on-primary-container transition-colors bg-primary-container text-on-primary-container border-primary-container">S</button>
-<button class="px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-primary-container hover:border-primary-container hover:text-on-primary-container transition-colors">M</button>
-<button class="px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-primary-container hover:border-primary-container hover:text-on-primary-container transition-colors">L</button>
-<button class="px-3 py-1 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-primary-container hover:border-primary-container hover:text-on-primary-container transition-colors">XL</button>
-</div>
-</div>
-<div>
-<h2 class="font-headline-sm text-headline-sm text-primary mb-md border-b border-surface-variant pb-xs">สี</h2>
-<div class="flex gap-2">
-<button class="w-6 h-6 rounded-full bg-[#fca5a5] border border-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ring-offset-surface"></button>
-<button class="w-6 h-6 rounded-full bg-[#bfdbfe] border border-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ring-offset-surface"></button>
-<button class="w-6 h-6 rounded-full bg-[#fef08a] border border-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ring-offset-surface ring-2 ring-primary ring-offset-2"></button>
-<button class="w-6 h-6 rounded-full bg-[#e9d5ff] border border-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ring-offset-surface"></button>
-<button class="w-6 h-6 rounded-full bg-[#f3f4f6] border border-outline-variant shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ring-offset-surface"></button>
-</div>
-</div>
-</aside>
-<!-- Product Grid -->
-<section class="col-span-1 lg:col-span-9">
-<!-- Mobile Filter Toggle (Visible only on small screens) -->
-<div class="lg:hidden flex justify-between items-center mb-md border-b border-surface-variant pb-sm">
-<h1 class="font-headline-md text-headline-md text-primary">สินค้าทั้งหมด</h1>
-<button class="flex items-center gap-xs px-3 py-2 bg-surface-container rounded-md text-on-surface-variant font-label-md hover:bg-surface-container-high transition-colors">
-<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
-<span>ตัวกรอง</span>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-base md:px-xl py-lg md:py-xl">
+<!-- Breadcrumbs -->
+<nav class="mb-lg flex items-center gap-sm text-on-surface-variant font-body-sm text-body-sm">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Products</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface font-semibold">เดรสผ้าฝ้ายฤดูร้อน (Summer Cotton Dress)</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Product Gallery (Left) -->
+<div class="lg:col-span-7 flex flex-col md:flex-row-reverse gap-sm md:gap-md">
+<!-- Main Image -->
+<div class="w-full md:w-4/5 rounded-xl overflow-hidden bg-surface-container-lowest shadow-[0_4px_12px_rgba(232,180,188,0.15)] relative aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="A high-quality editorial fashion photograph of a young woman modeling a breezy pastel pink summer cotton dress. The setting is a bright, sunlit minimalist studio with soft, diffused natural lighting creating a gentle light-mode aesthetic. The background is pristine white, emphasizing the soft feminine style and approachable boutique feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1v6jdDQOVrGlI5Wh-xHdpSmedXo9etqcRELV6mdORW2KyZIozFo2pjaXiXSFQVR5KTcsEAVsFUDJ3P-H_TUijzQEN2xkMn4l0u-Cyr2-RTiARWXYLiuxw7RS8Z1Nzeq0LKSSAOiCs7oqdDlLFAqSNMy7CeDva4DRsdqBiVRt6yMdLr4M2oLE9vez4rmE7gUnNvO725-Qqbj34KfP2zZCPrWaRG23es3KvIoPifPycR9WndlmPhrJC"/>
+<!-- Wishlist FAB -->
+<button class="absolute top-4 right-4 bg-surface/80 backdrop-blur-sm p-3 rounded-full text-on-surface hover:text-primary shadow-sm transition-all hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
 </button>
 </div>
-<!-- Header for desktop -->
-<div class="hidden lg:flex justify-between items-end mb-lg">
-<h1 class="font-display-lg text-display-lg text-primary">สินค้าคอลเลกชันใหม่</h1>
-<p class="font-body-md text-on-surface-variant">แสดง 1-6 จาก 24 รายการ</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-md">
-<!-- Product Card 1 -->
-<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] flex flex-col group hover:-translate-y-1 transition-transform duration-300">
-<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A soft minimalist flat lay or model shot of a delicate pastel pink summer dress. The fabric is light and flowing. The lighting is soft, bright, and natural, creating a clean, aesthetic look suitable for a high-end boutique e-commerce store. Background is a soft cream color." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG1qvyw3ge774YTy8Nn43Mr5GpfxFlLXgh3oqlM83-ymkBiCGvL_29kB-UdMaB_s79YSvnlC8Mbpdc13SLx31gEACGLbU8gpR2EO8QUT3tnDgqgDjER_-J7OYmoggT_WdNsxQ15W3xtRlfRkKVbX1r3x4X1jMsAoun_bV-aIHOkoi-YlRsmFnoueO_g2QdFE1_0GfD2pNRLAetWakFszBC9lYDMHWBC6U-hmwuRNELYto0feSNUMVL"/>
-<div class="absolute top-2 right-2 flex flex-col gap-2">
-<button class="p-2 bg-surface-container-lowest/80 backdrop-blur-sm rounded-full text-on-surface-variant hover:text-primary transition-colors shadow-sm">
-<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+<!-- Thumbnails -->
+<div class="flex md:flex-col gap-sm overflow-x-auto md:overflow-y-auto no-scrollbar w-full md:w-1/5 pb-2 md:pb-0">
+<button class="w-20 md:w-full aspect-[3/4] rounded-lg overflow-hidden border-2 border-primary shrink-0 opacity-100 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Close up detail shot of the pastel pink summer cotton dress fabric, showing the fine texture and stitching. Soft natural studio lighting, bright minimalist background, emphasizing quality and soft minimalism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRn8_CWwM4qTAY3U2Q_Y4OIy5QmfL1pvJLqtrnMzoF8o6JxJN9bCk3MVU6RLu5AkviD8BuITeefGmec6KupDF-6AN5x8vHUj6RBYj4Gy9FEyQypFSx7dF1j150gEfH76c9Nzp92N3D9TgGpnm3tWrbwxGHcW4yFscMHLjKobTQ8dwHpRP1begELPlfalXcehmeafGOYFySRYGxRJ6tMSU5MrEMwMTrwNn4hN2PMn5lWKUXOXxjBGSP"/>
+</button>
+<button class="w-20 md:w-full aspect-[3/4] rounded-lg overflow-hidden border-2 border-transparent shrink-0 opacity-60 hover:opacity-100 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Back view of the young woman modeling the pastel pink summer cotton dress in a bright minimalist studio. Soft natural lighting, clean white background, friendly and aspirational fashion photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBugtVMl0JT-QDBE_1qylz9sbU1UjKYfKBXWntC16EzFuhpOULeeuTgjvUTBPk63T_qe2yNVTBwPWh8gz5MPbkvmf4-q0vjBcQE7p9LOfsX-lkM3xjHPhO43SU_2CrqtW31XZzrS1UdxJT4vjfQFeOZg64WQSGYD2bnSc5vcAdWF8oFuj83Y5b0A7FH343BlOkdT0-7E0vbeCiHIel2Y9atneequyuSJ5jQoZ4j-Pbqihmhq_vU5OSC"/>
+</button>
+<button class="w-20 md:w-full aspect-[3/4] rounded-lg overflow-hidden border-2 border-transparent shrink-0 opacity-60 hover:opacity-100 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Lifestyle shot of the pastel pink summer cotton dress accessorized with a subtle woven bag. Bright, airy, minimalist aesthetic with soft pastel tones and generous whitespace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY5xHnFu-rlu1NdYoRSrczcInmHGtNWp9AtDz4n4Kv4C8ZbuEbVEd87VO212_CDg6NT4iv_MXNotiuCSRycQFU9157cDrZGLcHOSl7lTFOW4YtGMqg0R8gcii7Yyxmh77tE9Ua1T5M-Zx6TDU5l7XbbEYv5R-pIxMX03R0TbDv8vyP0cHtKxWsbMCjZMfCkmAqvfG8ZtDwL7zNgBxPL2kfBVipkNldBwVuhtzhftBZEIobbjjDBFKJ"/>
 </button>
 </div>
 </div>
-<div class="p-md flex flex-col flex-grow">
-<div class="flex justify-between items-start mb-xs">
-<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">เดรสผ้าชีฟองสีชมพูอ่อน</h3>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">เดรสยาวสไตล์เกาหลี</p>
-<div class="mt-auto flex justify-between items-center">
-<span class="font-headline-sm text-headline-sm text-primary font-bold">฿ 890</span>
-<button class="bg-primary-container text-on-background font-label-md text-label-md px-4 py-2 rounded-md hover:-translate-y-0.5 hover:shadow-md transition-all flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
-                                เพิ่มลงตะกร้า
-                            </button>
+<!-- Product Details (Right) -->
+<div class="lg:col-span-5 flex flex-col gap-lg">
+<!-- Header & Price -->
+<div class="flex flex-col gap-sm">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">เดรสผ้าฝ้ายฤดูร้อน<br/><span class="text-on-surface-variant font-headline-sm text-headline-sm font-normal">Summer Cotton Dress</span></h1>
+<div class="flex items-end gap-sm mt-2">
+<span class="font-display-lg text-display-lg text-primary">฿1,290</span>
 </div>
 </div>
-</article>
-<!-- Product Card 2 -->
-<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] flex flex-col group hover:-translate-y-1 transition-transform duration-300">
-<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A beautifully styled photograph of a pastel blue cropped top. The top is made of soft ribbed knit material. The lighting is soft and airy, highlighting the texture of the fabric. The overall mood is calm, modern, and feminine, fitting a cute but professional e-commerce visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxhuHqtrHAhu8T1T8f3GVyIHb3Nrf6SqH3x7Jfa6kKS-ryZ1c7vpbdFQuldXCV_N7q7bZf_YQnTyktL-BoMTTSRXq39iVkVQi1zgS9OUZxHqHwKUStcn4ElTtzUDrVEpkLfbwQxGX1rU71u8gDD5SEeyOSb1BmGLKH-QCwf2mE-qCFHsNhjtZ9FYJzN8CoOlhRzHgcebqNNGZwJgvk3cmSafnq3S2frhD9qxpM4ZDDm4BdK51aGCFZ"/>
-</div>
-<div class="p-md flex flex-col flex-grow">
-<div class="flex justify-between items-start mb-xs">
-<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">เสื้อไหมพรมครอปสีฟ้า</h3>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">เสื้อแขนสั้น ผ้านิ่มใส่สบาย</p>
-<div class="mt-auto flex justify-between items-center">
-<span class="font-headline-sm text-headline-sm text-primary font-bold">฿ 450</span>
-<button class="bg-primary-container text-on-background font-label-md text-label-md px-4 py-2 rounded-md hover:-translate-y-0.5 hover:shadow-md transition-all flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
-                                เพิ่มลงตะกร้า
-                            </button>
-</div>
-</div>
-</article>
-<!-- Product Card 3 -->
-<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] flex flex-col group hover:-translate-y-1 transition-transform duration-300">
-<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
-<div class="absolute top-0 left-0 bg-secondary text-on-secondary font-label-md text-[10px] px-2 py-1 rounded-br-lg z-10">BEST SELLER</div>
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist editorial style photo of a light yellow midi skirt with floral patterns. The skirt is draped elegantly. High-key soft lighting emphasizes the pastel color palette and soft shapes. The setting suggests a premium, curated fashion boutique." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkrxgBe5-u4VWCsMaenHLsCLTfI3YxM80_wTENHS3bkBcUH5rnCZZgHWt6EktU378xYcBP6Tok2vWd73UzsbcnvIN5OYsbE4lFUvO-KMnFVVHJsAnO-S1OMrSqKOt667Z9knAnigG7vMc6CsJm0IyWrsviBtOMuLlxm6DUQjjCsLcAcjyB42lJWXGJF5dWyYawRf9K_-xbRinrZ1-WyqxFnK7ZEsZSMf7ONz4FmwvsIoQ8oNK8aCPm"/>
-</div>
-<div class="p-md flex flex-col flex-grow">
-<div class="flex justify-between items-start mb-xs">
-<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">กระโปรงยาวลายดอกไม้</h3>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">กระโปรงทรงเอ สีเหลืองพาสเทล</p>
-<div class="mt-auto flex justify-between items-center">
-<span class="font-headline-sm text-headline-sm text-primary font-bold">฿ 690</span>
-<button class="bg-primary-container text-on-background font-label-md text-label-md px-4 py-2 rounded-md hover:-translate-y-0.5 hover:shadow-md transition-all flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
-                                เพิ่มลงตะกร้า
-                            </button>
-</div>
-</div>
-</article>
-<!-- Product Card 4 -->
-<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(232,180,188,0.15)] flex flex-col group hover:-translate-y-1 transition-transform duration-300">
-<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, professional e-commerce product shot of a delicate white lace camisole top. The background is a soft pastel pink to create a harmonious contrast. The lighting is diffused, giving a soft minimalism aesthetic that appeals to young professionals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwUnYBCAfbYgWXQJpqgv_sKA7G2usrwCRymQ0xBS7hUEr5N4PJyR-TBnaqx2hJ49bee7bxfKOnuHm1I2ZM0e4COBJYB9xy2huEYEmOCXiqG3POG53MRUexKdgVko8FLGMvYGAUeO7Im7agImsg_3WIo6umPNExqicZyLRvK3eVdOAzWKEFZEsfrzQjtWT49_k0punD-OIGhgrLcODLfahiDBeMZRiF1R6ORhbG3k0u6xB8pOdZvJen"/>
-</div>
-<div class="p-md flex flex-col flex-grow">
-<div class="flex justify-between items-start mb-xs">
-<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1">เสื้อสายเดี่ยวลูกไม้ขาว</h3>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">สไตล์มินิมอล แมทช์ง่าย</p>
-<div class="mt-auto flex justify-between items-center">
-<span class="font-headline-sm text-headline-sm text-primary font-bold">฿ 390</span>
-<button class="bg-primary-container text-on-background font-label-md text-label-md px-4 py-2 rounded-md hover:-translate-y-0.5 hover:shadow-md transition-all flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
-                                เพิ่มลงตะกร้า
-                            </button>
-</div>
-</div>
-</article>
-</div>
-<!-- Pagination -->
-<div class="mt-xl flex justify-center items-center gap-2">
-<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors disabled:opacity-50" disabled="">
-<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+<!-- Description -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    เดรสผ้าฝ้ายสไตล์มินิมอล เนื้อผ้าโปร่งสบาย ระบายอากาศได้ดีเยี่ยม เหมาะสำหรับวันพักผ่อนหรือเดินเล่นชิลๆ ดีไซน์คอวีทรงปล่อย ช่วยพรางหุ่นให้ดูเพรียวสวย มาพร้อมกระเป๋าข้างสองด้านเพื่อความสะดวกสบาย
+                </p>
+<!-- Color Selection -->
+<div class="flex flex-col gap-sm">
+<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Color: Pastel Pink</h3>
+<div class="flex gap-sm">
+<button class="w-10 h-10 rounded-full bg-[#FFD1DC] ring-2 ring-offset-2 ring-primary relative flex items-center justify-center transition-all">
+<span class="material-symbols-outlined text-primary text-[20px] filled-icon">check</span>
 </button>
-<button class="w-10 h-10 rounded-full flex items-center justify-center bg-primary-container text-on-primary-container font-label-md font-bold transition-colors">1</button>
-<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md">2</button>
-<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md">3</button>
-<span class="text-on-surface-variant px-1">...</span>
-<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md">8</button>
-<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container-high transition-colors">
-<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+<button class="w-10 h-10 rounded-full bg-[#F5F5F5] ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button class="w-10 h-10 rounded-full bg-[#E6E5B9] ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+</div>
+</div>
+<!-- Size Selection -->
+<div class="flex flex-col gap-sm">
+<div class="flex justify-between items-center">
+<h3 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Size</h3>
+<a class="font-body-sm text-body-sm text-primary underline hover:text-on-primary-container transition-colors" href="#">Size Guide</a>
+</div>
+<div class="flex flex-wrap gap-sm">
+<button class="px-6 py-3 rounded-full bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-variant transition-colors">S</button>
+<button class="px-6 py-3 rounded-full bg-primary-container font-label-md text-label-md text-on-primary-container ring-1 ring-primary transition-colors">M</button>
+<button class="px-6 py-3 rounded-full bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-variant transition-colors">L</button>
+<button class="px-6 py-3 rounded-full bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-variant transition-colors">XL</button>
+</div>
+</div>
+<!-- Actions (Quantity & Add to Cart) -->
+<div class="flex flex-col sm:flex-row gap-md mt-md">
+<!-- Quantity -->
+<div class="flex items-center justify-between bg-surface-container rounded-md px-4 py-2 sm:w-32 h-14 shrink-0">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined">remove</span>
 </button>
+<span class="font-headline-sm text-headline-sm text-on-surface">1</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Add to Cart Button -->
+<button class="flex-grow bg-primary-container text-on-primary-container font-headline-sm text-headline-sm h-14 rounded-md flex items-center justify-center gap-sm hover:shadow-[0_4px_12px_rgba(232,180,188,0.3)] hover:-translate-y-0.5 transition-all duration-200 active:scale-[0.98]">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Add to Cart
+                    </button>
+</div>
+<!-- Additional Info Accordion (Simulated) -->
+<div class="mt-lg border-t border-surface-variant pt-md flex flex-col gap-sm">
+<button class="flex justify-between items-center w-full py-2 text-left group">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Details &amp; Care</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</button>
+<button class="flex justify-between items-center w-full py-2 text-left group border-t border-surface-variant/50">
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Shipping &amp; Returns</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Related Products Section -->
+<section class="mt-xl pt-xl border-t border-surface-variant">
+<div class="flex justify-between items-end mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">You May Also Like</h2>
+<a class="font-label-md text-label-md text-primary hover:underline pb-1" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md md:gap-lg">
+<!-- Related Item 1 -->
+<a class="group flex flex-col gap-sm" href="#">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-lowest shadow-[0_4px_12px_rgba(232,180,188,0.05)] group-hover:shadow-[0_8px_24px_rgba(232,180,188,0.15)] transition-all duration-300 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A friendly e-commerce product shot of a cream-colored soft knit cardigan. Clean minimalist background, bright studio lighting, soft feminine aesthetic aligning with the pastel light-mode brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLyqFcmdaOXTnxpM6Nm3BVtXLUjrltsESPXnRv6c_T7ToUrHoTq8g5t-kyG3LQD-wjxwAEBayWJNS_62w17Z_DsVVOe2kQWkn2I4mDRf-1G7B-ZHS4NpRROcjCv5kyFm4G_o36O8JNmSs9H3iWpsVhhcOO0TqN9_J0jeChHRQ6VQeXVu3nbi7TbcvWJT6H_l7SCwnXkypTwoP09a1bljPVTT0caU-w_0jT66hjUpcQDG0fZTlL59Ob"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Soft Knit Cardigan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">฿990</p>
+</div>
+</a>
+<!-- Related Item 2 -->
+<a class="group flex flex-col gap-sm" href="#">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-lowest shadow-[0_4px_12px_rgba(232,180,188,0.05)] group-hover:shadow-[0_8px_24px_rgba(232,180,188,0.15)] transition-all duration-300 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean product photography shot of wide-leg linen trousers in a soft beige tone. The setting is bright and airy with generous whitespace, conveying a sense of relaxed comfort and modern soft minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCutgak-9WK0Dcjzvlp3aWnSoV7S9zLFZBoijTQQgw2I6H4IGrUGxDv8hDmeenkAJTOZ9HI0Vx59Qkz4iJ3M8lt7XPro85rJu3GZtwxJgdZnKSdabGy8vpnjImZiLkEtszH0nbGGJHCe912lkmY8ZSlHlwlcHLYsFM7lhj_0KQw1zTSZMMdNF-EHHmA7gxeee7H26cJmWqZriqet3UgeJJqYedG7xV9G04NPyo9weHwplZm06zT_veD"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Wide Leg Linen Trousers</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">฿1,450</p>
+</div>
+</a>
+<!-- Related Item 3 -->
+<a class="group flex flex-col gap-sm hidden md:flex" href="#">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-lowest shadow-[0_4px_12px_rgba(232,180,188,0.05)] group-hover:shadow-[0_8px_24px_rgba(232,180,188,0.15)] transition-all duration-300 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-quality image of a delicate pastel floral blouse. Photographed flat-lay on a cream surface with soft, diffused light to highlight the gentle colors and lightweight fabric, fitting the cute feminine brand style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNpMrYBHIrwWMTSqd_98u6FzM9_NEJH3RDBfY2PQL-7eo98MOv5mKr33AaRYMR8JfIXHkkIvZ9-fJThYvaAygU_f6C5yZ4ff8T_WERWKBFSV9Nm2lS-C23nChqzl-SxxCjgclVE6-ULRcLj-1euiOFAeQO-PMNsqHMvDsBRucHg5CcEtjDN-jnuV1QSwufvHqPKjMezgJ_8yn9MgXkYz6XpyXG2j_8bwb2A6ztx4bmzVLrtwnfiLe3"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Pastel Floral Blouse</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">฿890</p>
+</div>
+</a>
+<!-- Related Item 4 -->
+<a class="group flex flex-col gap-sm hidden md:flex" href="#">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container-lowest shadow-[0_4px_12px_rgba(232,180,188,0.05)] group-hover:shadow-[0_8px_24px_rgba(232,180,188,0.15)] transition-all duration-300 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist fashion accessory shot featuring a small woven crossbody bag in soft neutral tones. The background is pristine white with ambient, pastel-tinted shadows, emphasizing a curated boutique experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADWQRLgnAXN58Bfy82TPr760hfL2QieM-8dig_dXx8IIGZ8PeXb-bFHRWzv75kV1FR2Te-KD3LIOjqjTp8fomZPBD6XMHnvcOxqF5u64Y1MrFvMbB_dMzMAOQjJ9Hum4ID7doGmes6ZsuwlJiECmzbEaI-hdYlPjBSlQhf0t316wI-7d7P2oj8l2ZwD2A32RcICuTEp9TKixOGSGS25Ph9Kxa0NXVvdqV6WZbwe9IiPThnPKXU4zVu"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Woven Crossbody Bag</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">฿1,190</p>
+</div>
+</a>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-surface-container dark:bg-surface-container-highest text-primary dark:text-inverse-primary font-body-sm text-body-sm font-label-md text-label-md w-full bg-surface-container dark:bg-surface-container-high mt-auto">
+<footer class="bg-surface-container mt-xl">
 <div class="flex flex-col md:flex-row justify-between items-start gap-lg w-full px-base md:px-xl py-xl max-w-container-max mx-auto">
+<div class="flex flex-col gap-md">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Jan Fashion</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Curated style for the modern, gentle soul. Embrace soft minimalism every day.</p>
+</div>
+<div class="flex flex-wrap gap-lg md:gap-xl">
 <div class="flex flex-col gap-sm">
-<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-inverse-on-surface">Jan Fashion</span>
-<p class="text-on-surface-variant font-body-sm max-w-xs">ร้านเสื้อผ้าแฟชั่นสไตล์เกาหลี มินิมอล สำหรับผู้หญิงยุคใหม่ที่รักการแต่งตัว</p>
+<a class="text-on-surface-variant/80 hover:text-primary hover:underline transition-all duration-200 font-label-md text-label-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant/80 hover:text-primary hover:underline transition-all duration-200 font-label-md text-label-md" href="#">Terms of Service</a>
 </div>
-<nav class="flex flex-col md:flex-row gap-lg md:gap-xl">
 <div class="flex flex-col gap-sm">
-<h4 class="font-headline-sm text-headline-sm text-on-surface dark:text-inverse-on-surface mb-2">ลิงก์ที่เป็นประโยชน์</h4>
-<a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">Terms of Service</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">Shipping &amp; Returns</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-inverse-primary hover:underline transition-all duration-200" href="#">Newsletter</a>
+<a class="text-on-surface-variant/80 hover:text-primary hover:underline transition-all duration-200 font-label-md text-label-md" href="#">Shipping &amp; Returns</a>
+<a class="text-on-surface-variant/80 hover:text-primary hover:underline transition-all duration-200 font-label-md text-label-md" href="#">Newsletter</a>
 </div>
-</nav>
 </div>
-<div class="w-full border-t border-surface-variant/50 py-4 text-center">
-<p class="text-on-surface-variant font-body-sm">© 2024 Jan Fashion. All rights reserved.</p>
+<div class="w-full md:w-auto mt-lg md:mt-0 pt-lg md:pt-0 border-t border-surface-variant/50 md:border-t-0 text-center md:text-left">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Jan Fashion. All rights reserved.</p>
+</div>
 </div>
 </footer>
 </body></html>
